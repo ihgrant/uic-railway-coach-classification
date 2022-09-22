@@ -5,12 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UIC Railway Coach Classification Decoder</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="decoder">
-        <input type="text" name="code">
-        <button type="submit">Decode</button>
-    </form>
-    <script src="decoder.js"></script>
+    <div class="content">
+        <form id="decoder">
+            <input type="text" name="code">
+            <select name="locale">
+                <option value="AT">Austria</option>
+                <option value="DE">Germany</option>
+                <option value="DR">Nazi Germany</option>
+                <option value="CH">Switzerland</option>
+                <option value="NO">Norway</option>
+                <option value="SE">Sweden</option>
+            </select>
+            <button type="submit">Decode</button>
+        </form>
+        <ul id="output"></ul>
+        <script src="https://cdn.jsdelivr.net/npm/chevrotain@10.3.0/lib/chevrotain.min.js"></script>
+        <script src="decoder-lexer-parser.js"></script>
+    </div>
 </body>
 </html>
